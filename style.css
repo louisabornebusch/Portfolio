@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
+
+@import url('https://fonts.googleapis.com/css?family=Abel|Dosis|Work+Sans');
+
+/* fonts 
+font-family: 'Work Sans', sans-serif;
+font-family: 'Dosis', sans-serif;
+font-family: 'Abel', sans-serif;
+*/
+
+
+
+/* DEFAUT STYLING 
+=============================================== */
+
+* {
+    box-sizing: border-box;
+    /* makes padding a lot easier */
+    transition: all ease-in-out 250ms;
+    /* default transitino for all hover effects */
+}
+
+html,
+body {
+
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+}
+
+#container {
+        display: table;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .row {
+        display: table-row;
+        width: 100%;
+        height: 100%;
+
+    }
+
+
+.middle {
+    height: 30vh;
+    background-image: url(img/max-ostrozhinskiy-218836.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10em 0em;
+
+}
+
+
+.section {
+    width: 100%;
+    height: 100%;
+    max-width: 74em;
+    margin: 0 auto;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.clearfix::after,
+section::after,
+footer::after {
+    content: '';
+    display: block;
+    clear: both;
+
+}
+
+
+/* sidebar-layout */
+
+@media (min-width: 60rem) {
+
+
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        font-family: 'Work Sans';
+        text-align: center;
+    }
+
+    #container {
+        display: table;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    .row {
+        display: table-row;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .header,
+    .footer {
+        background: white;
+        display: table-row;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .content {
+        display: table;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+    }
+
+    .middle {
+        height: 100vh;
+        display: table-cell;
+        vertical-align: middle;
+        background-image: url(img/max-ostrozhinskiy-218836.jpg);
+        background-size: cover;
+        background-position: center;
+        width: 80%;
+        color: white;
+    }
+    
+    .middle-about {
+        height: 100vh;
+        display: table-cell;
+        vertical-align: middle;
+        
+        background-size: cover;
+        background-position: center;
+        width: 80%;
+        color: black;
+
+}
+
+
+    .left {
+        display: table-cell;
+        vertical-align: middle;
+        position: fixed;
+        top: 50%;
+        width: 10%;
+        float: left;
+
+    }
+
+    .right {
+        display: table-cell;
+        vertical-align: middle;
+        position: fixed;
+        top: 50%;
+        width: 10%;
+        float: right;
+
+    }
+
+}
+
+/* collapse sidebar-layout */
+
+/* Column systemn for portfolio sectino 
+=============================================== */
+
+/* select all classes that start with "col-" */
+
+[class^=col-] {
+    width: 100%;
+    margin-top: 1em;
+
+}
+
+[class^=col-]:first-child {
+    margin-top: 1em;
+}
+
+.col-1 {
+    width: 33.333334%;
+    float: left;
+}
+
+
+/* for bigger screens */
+
+@media (min-width: 40rem) {
+
+    [class^=col-] {
+        float: left;
+        padding: 0 .5em;
+        margin-top: 0;
+    }
+
+    [class^=col-]:first-child {
+        padding-left: 0;
+    }
+
+    [class^=col-]:last-child {
+        padding-right: 0;
+    }
+
+    .col-3 {
+        width: 50%;
+    }
+
+    .col-1 {
+        width: 16.6666%;
+    }
+
+}
+
+
+
+
+/* TYPOGRAPHY
+=============================================== */
+
+h1 {
+    font-weight: 300;
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+
+p {
+    margin-top: .5em;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+}
+
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5em;
+    font-weight: 700;
+    margin-top: 1em;
+}
+
+span {
+    font-weight: 600;
+    line-height: 1.8;
+    display: block;
+    font-size: 1em;
+}
+
+title-top {
+    font-size: 1.3rem;
+}
+
+.title-middle {
+    font-size: 1rem;
+    margin-bottom: 1em;
+    font-weight: 500;
+    margin-top: .5em;
+    padding-top: 1em;
+}
+
+.title-cta {
+    font-size: 1rem;
+    margin-bottom: 1em;
+    font-weight: 500;
+    margin-top: 2em;
+}
+
+
+.unstyled-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+@media (min-width:60rem) {
+    p {
+        font-size: 1.0rem;
+        line-height: 1.6;
+        margin-top: 0;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    title-top {
+        font-size: 1.3rem;
+    }
+
+    .title-middle {
+        font-size: 1.3rem;
+        margin-bottom: 1em;
+        font-weight: 500;
+        margin-top: 1em;
+    }
+
+    #title-left {
+        font-size: 1.3rem;
+        transform: rotate(270deg);
+        /* Equal to rotateZ (45deg) */
+    }
+
+
+    #title-right {
+        font-size: 1.3rem;
+        transform: rotate(90deg);
+        /* Equal to rotateZ(45deg) */
+    }
+
+
+    .title-footer {
+        margin-top: -0em;
+    }
+
+    .unstyled-list {
+        margin-left: 1em;
+    }
+}
+
+
+/* BUTTONS
+=============================================== */
+
+.button {
+    display: inline-block;
+    font-size: 1.15rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    padding: .5em 1.75em;
+}
+
+@media (min-width:60rem) {
+    .button {
+        font-size: 1.5rem;
+    }
+}
+
+.button-small {
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.button-accent {
+    color: white;
+    border-color: #ffffff;
+}
+
+.button-accent:hover,
+.button-accent:focus {
+    background: #919191;
+    color: white;
+    font-size: .75rem;
+}
+
+
+.button-dark {
+    color: black;
+    border-color: black;
+}
+
+.button-dark:hover,
+.button-dark:focus {
+    background: #6A8E7F;
+    color: #ffffff;
+}
+
+/* HEADER 
+=============================================== */
+
+header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 1em;
+}
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+
+nav li {
+    display: inline-block;
+    /* aligning them on one line */
+    margin: 1em;
+}
+
+nav a {
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .5rem;
+    padding-right: 2em;
+    /* making the clickble area a little bit bigger */
+    color: black;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #DDD;
+}
+
+@media (min-width:60rem) {
+    .header {
+        font-size: 1.3rem;
+    }
+
+    nav ul {
+        margin: 0;
+        list-style: none;
+        float: right;
+    }
+
+    nav a {
+        font-weight: 900;
+        font-size: 1rem;
+    }
+}
+
+
+
+/* portfolio section
+=============================================== */
+
+.portfolio {
+    margin: 0em 0 0;
+}
+
+.port-item {
+    margin: 0;
+    position: relative;
+}
+
+.port-item img {
+    display: block;
+    padding: .9em;
+}
+
+.port-desc {
+    position: absolute;
+    z-index: 100;
+    bottom: .9em;
+    left: .9em;
+    right: .9em;
+    color: white;
+    background: rgba(0, 0, 0, .6);
+    padding-bottom: 2em;
+
+}
+
+.port-desc p {
+    margin: 1em;
+}
+
+
+/* tablet screens */
+
+@media (min-width: 37rem) {
+    .port-item {
+        width: 50%;
+        float: left;
+    }
+}
+
+/* Bigger screens */
+
+@media (min-width: 60rem) {
+    .portfolio {
+    margin: 3em 0 0;
+}
+    
+    
+    .port-item {
+        width: 33.33334%;
+        overflow: hidden;
+
+        /* if the description doesn't fit inside the picture they will be hidden - below we add a hover effect */
+    }
+
+    /* moving the port description below the pictures for bigger screens */
+    .port-desc {
+        transform: translateY(150%);
+    }
+
+    /* adding a hover effect on the description */
+    .port-item:hover .port-desc {
+        transform: translateY(0);
+    }
+
+}
+
+/* About section
+=============================================== */
+
+#section-about {
+    background-color: #BDE5FC;
+
+    margin: 0 auto;
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+.about-item {
+    margin: 0;
+    position: relative;
+}
+.about-item img {
+    display: block;
+    padding: .9em;
+}
+
+/* tablet screens */
+
+@media (min-width: 37rem) {
+    .about-item {
+        width: 50%;
+        float: left;
+    }
+}
+
+    .about-text {
+        margin: 0;
+    }
+
+
+/* Bigger screens */
+
+@media (min-width: 60rem) {
+    
+    #section-about {
+        height: 100%;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+    .about-text {
+        margin: 9em 9em 9em 9em;   
+    }
+    
+    .about-item {
+        width: 33.33334%;
+        overflow: hidden;
+        
+        /* if the description doesn't fit inside the picture they will be hidden - below we add a hover effect */
+    }
+
+    /* moving the port description below the pictures for bigger screens */
+    .port-desc {
+        transform: translateY(150%);
+    }
+
+    /* adding a hover effect on the description */
+    .about-item:hover .port-desc {
+        transform: translateY(0);
+    }
+}
+
+
+
+/* CTA section
+=============================================== */
+#section-cta {
+    background-color: #BCFFCA;
+    margin: 0 auto;
+    height: 100%;
+    margin-bottom: 2em;
+    margin-top: 0em;
+}
+
+
+@media (min-width:60rem) {
+
+    #section-cta {
+        margin: 0 auto;
+        height: 100%;
+        margin-bottom: 4em;
+    }
+}
+
+
+/* FOOTER
+=============================================== */
+
+footer {
+    background: #DCDCD9;
+    color: white;
+    text-align: left;
+    padding: 2em 0;
+}
